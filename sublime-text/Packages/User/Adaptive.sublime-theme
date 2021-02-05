@@ -1,0 +1,16 @@
+{
+    // http://www.sublimetext.com/docs/3/themes.html
+    "variables": {
+    },
+    "rules": [
+        {
+            "class": "sidebar_tree",
+            "row_padding": [16, 1, 4, 1],
+            "indent": 12,
+            "indent_offset": 13,
+            "indent_top_level": false,
+            "dark_content": true,
+            "spacer_rows": true
+        },
+    ],
+}

@@ -1,0 +1,11 @@
+# vim
+session/
+plugged/
+
+# sublime
+Backup/
+Cache/
+Index/
+Local/
+Log/
+Lib/

@@ -1,0 +1,18 @@
+{
+	"bootstrapped": true,
+	"debug": false,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"gruvbox",
+		"HTML-CSS-JS Prettify",
+		"JSX",
+		"LiveReload",
+		"NeoVintageous",
+		"Package Control",
+		"SideBarEnhancements",
+		"VHDL Mode"
+	]
+}

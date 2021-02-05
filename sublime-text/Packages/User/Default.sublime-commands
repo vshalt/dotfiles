@@ -1,0 +1,9 @@
+[
+{
+    "caption": "Terminus: Toggle Panel",
+    "command": "toggle_terminus_panel",
+    "args":
+    {
+        "cwd": "${file_path:${folder}}"
+    }
+}, ]

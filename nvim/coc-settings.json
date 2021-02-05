@@ -1,0 +1,53 @@
+{
+  // suggestions
+  // "suggest.echodocSupport": true,
+  // TODO add more labels and give them cool glyphs
+  "suggest.completionItemKindLabels": {
+    "text": "t",
+    "method": "m",
+    "function": ""
+  },
+
+  // diagnostics
+  "diagnostic.errorSign": " ",
+  "diagnostic.warningSign": " ",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": " ",
+  // "diagnostic.displayByAle": true,
+  // "diagnostic.virtualText": true, // this won't work with codelens when error on same line
+
+  // codelens TODO what does this get me?
+  // "codeLens.enable": true,
+
+
+  // autoformat
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "javascript",
+    "graphql",
+    "html",
+    "python",
+  ],
+  "coc.preferences.hoverTarget": "float",
+
+  // python config
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Path": "/home/user/.pyenv/versions/3.8.5/bin/flake8",
+  "python.linting.flake8Args": ["--ignore=E501,W292,E302,E305,W391,E303,E291,W293,E231,E222,E225,E271,E722,E221,E251,E226,E228,E241"],
+
+  "python.formatting.blackEnabled": true,
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/home/user/.pyenv/versions/3.8.5/bin/black",
+  "python.formatting.blackArgs": ["--ignore=E501,W292,E302,E305,W391,E303,E291,W293,E231,E222,E225,E271,E722,E221,E251,E226,E228,E241"],
+
+  " python.sortImports.path": "/home/user/.pyenv/versions/3.8.5/bin/isort",
+
+  "python.jediPath": "/home/user/.pyenv/versions/3.8.5/lib/python3.8/site-packages",
+
+
+// html config
+"html.format.wrapLineLength":0,
+"html.format.unformatted":"null",
+"html.autoClosingTags": true,
+}
