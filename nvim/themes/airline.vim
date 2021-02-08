@@ -11,7 +11,7 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 
 " Switch to your current theme
-let g:airline_theme='fruit_punch'
+let g:airline_theme='base16_vim'
 
 " Always show tabs
 set showtabline=2

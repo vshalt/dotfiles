@@ -39,4 +39,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
    " undotree
    Plug 'mbbill/undotree'
+
+   "Theme 
+   Plug 'ayu-theme/ayu-vim'
    call plug#end()

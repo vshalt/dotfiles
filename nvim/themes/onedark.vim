@@ -5,10 +5,11 @@ let g:onedark_termcolors=256
 
 syntax on
 
-" colorscheme onedark
 colorscheme gruvbox
 set background=dark
-highlight Normal guibg=none
+
+" Sets the background color to transparent
+highlight Normal guibg=#111111
 
 " checks if your terminal has 24-bit color support
 if (has("termguicolors"))

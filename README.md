@@ -14,7 +14,7 @@ You can get your copy of dotfiles by cloning the repo.
 Once the repo is cloned, `cd` into the folder.
 
 ## Required packages
-In the `packages` file there are the packages I use.  
+In the `packages` file there are the packages I use.
 Install the packages.
 
 ## Configuration
@@ -31,3 +31,6 @@ Next, open neovim and `:PlugInstall` the plugins.
 
 ### For sublime
 `ln -s /path/to/dotfiles/sublime-text ~/.config/sublime-text-3`
+
+### For redshift
+`ln -s /path/to/dotfiles/redshift/redshift.conf ~/.config/redshift.conf`
