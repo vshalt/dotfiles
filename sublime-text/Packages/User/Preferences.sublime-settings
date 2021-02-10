@@ -1,51 +1,56 @@
 {
-    "auto_complete_commit_on_tab": true,
-    "auto_complete_with_fields": true,
-    "caret_style": "solid orange",
-    "color_scheme": "Packages/gruvbox/gruvbox (Dark) (Hard).sublime-color-scheme",
-    "drag_text": false,
-    "draw_white_space": "selection",
-    "ensure_newline_at_eof_on_save": true,
-    "folder_exclude_patterns": [
-        ".svn",
-        ".git",
-        ".hg",
-        "CVS",
-        "__pycache__"
-    ],
-    "font_face": "Fira Code",
-    "font_options": [
-        "Retina",
-        "gray_antialias"
-    ],
-    "font_size": 9,
-    "git_diff_target": "head",
-    "highlight_line": false,
-    "highlight_modified_tabs": true,
-    "ignored_packages": [
-        "Six",
-        "Vintage",
-        "Vintageous"
-    ],
-    "indent_guide_options": [
-        "draw_normal",
-        "draw_active"
-    ],
-    "move_to_limit_on_up_down": true,
-    "neovintageous_build_version": 11100,
-    "overlay_scroll_bars": "enabled",
-    "rulers": [
-        80
-    ],
-    "show_encoding": true,
-    "show_tab_close_buttons": false,
-    "swallow_startup_errors": true,
-    "theme": "Adaptive.sublime-theme",
-    "translate_tabs_to_spaces": true,
-    "trim_trailing_white_space_on_save": true,
-    "vintageous_i_escape_jj": true,
-    "vintageous_use_ctrl_keys": true,
-    "vintageous_use_super_keys": false,
-    "vintageous_use_sys_clipboard": true,
-    "word_wrap": false
+	"auto_complete_commit_on_tab": true,
+	"auto_complete_with_fields": true,
+	"caret_style": "solid orange",
+	"color_scheme": "Packages/ayu/ayu-dark.sublime-color-scheme",
+	"drag_text": false,
+	"draw_white_space": "selection",
+	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"__pycache__"
+	],
+	"font_face": "Fira Code",
+	"font_options":
+	[
+		"Retina",
+		"gray_antialias"
+	],
+	"font_size": 9,
+	"git_diff_target": "head",
+	"highlight_line": false,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Six",
+		"Vintage",
+		"Vintageous"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"move_to_limit_on_up_down": true,
+	"neovintageous_build_version": 11100,
+	"overlay_scroll_bars": "enabled",
+	"rulers":
+	[
+		80
+	],
+	"show_encoding": true,
+	"show_tab_close_buttons": false,
+	"swallow_startup_errors": true,
+	"theme": "ayu-dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"vintageous_i_escape_jj": true,
+	"vintageous_use_ctrl_keys": true,
+	"vintageous_use_super_keys": false,
+	"vintageous_use_sys_clipboard": true,
+	"word_wrap": false
 }

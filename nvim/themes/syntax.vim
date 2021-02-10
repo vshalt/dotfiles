@@ -10,3 +10,6 @@ aug end
 let g:user_emmet_leader_key='<C-M>'
 
 let g:better_whitespace_enabled=1
+
+set colorcolumn=80
+" highlight colorcolumn guibg=darkgrey
