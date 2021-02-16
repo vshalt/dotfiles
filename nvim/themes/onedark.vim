@@ -9,7 +9,7 @@ colorscheme gruvbox
 set background=dark
 
 " Sets the background color to transparent
-highlight Normal guibg=#111111
+highlight Normal guibg=#151515
 
 " checks if your terminal has 24-bit color support
 if (has("termguicolors"))

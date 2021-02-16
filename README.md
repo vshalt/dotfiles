@@ -34,3 +34,6 @@ Next, open neovim and `:PlugInstall` the plugins.
 
 ### For redshift
 `ln -s /path/to/dotfiles/redshift/redshift.conf ~/.config/redshift.conf`
+
+### For awesome wm
+`ln -s /path/to/dotfiles/awesome ~/.config/awesome`
