@@ -30,7 +30,7 @@ set noshowmode                          " We don't need to see things like -- IN
 set nobackup                            " This is recommended by coc
 set noswapfile                          " No swap files are created
 set nohlsearch                          " Searches are not highlighted
-set undodir=~/.config/nvim/.undodir//
+set undodir=~/.config/nvim/.undodir/
 set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms

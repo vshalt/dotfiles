@@ -2,6 +2,15 @@
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
 
+-- custom
+local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
+local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
+local volume_widget_widget = volume_widget({display_notification = true})
+local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
+local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
+
+
+
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
@@ -126,6 +135,13 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
+-- default
+local cw = calendar_widget()
+-- or customized
+mytextclock:connect_signal("button::press", 
+    function(_, _, _, button)
+        if button == 1 then cw.toggle() end
+    end)
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -231,7 +247,12 @@ awful.screen.connect_for_each_screen(function(s)
             mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
-            s.mylayoutbox,
+
+             --[[default]]
+            batteryarc_widget(),
+             volume_widget_widget,
+            logout_menu_widget(),
+            s.mylayoutbox, 
         },
     }
 end)
@@ -587,3 +608,4 @@ beautiful.useless_gap = 5
 -- autostart
 awful.spawn.with_shell("compton")
 awful.spawn.with_shell("nitrogen --restore")
+
