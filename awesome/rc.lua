@@ -6,8 +6,9 @@ pcall(require, "luarocks.loader")
 local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
 local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
 local volume_widget_widget = volume_widget({display_notification = true})
-local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
+local batteryarc_widget = require("awesome-wm-widgets.battery-widget.battery")
 local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
+
 
 
 
@@ -244,15 +245,14 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
-            wibox.widget.systray(),
             mytextclock,
+
+            wibox.widget.systray(),
 
              --[[default]]
             batteryarc_widget(),
              volume_widget_widget,
             logout_menu_widget(),
-            s.mylayoutbox, 
         },
     }
 end)
