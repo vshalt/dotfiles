@@ -10,8 +10,6 @@ local batteryarc_widget = require("awesome-wm-widgets.battery-widget.battery")
 local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
 
 
-
-
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
@@ -608,4 +606,4 @@ beautiful.useless_gap = 5
 -- autostart
 awful.spawn.with_shell("compton")
 awful.spawn.with_shell("nitrogen --restore")
-
+awful.util.spawn('nm-applet')
