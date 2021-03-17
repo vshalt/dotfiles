@@ -606,4 +606,5 @@ beautiful.useless_gap = 5
 -- autostart
 awful.spawn.with_shell("compton")
 awful.spawn.with_shell("nitrogen --restore")
+awful.spawn.with_shell("xfce4-power-manager")
 awful.util.spawn('nm-applet')
