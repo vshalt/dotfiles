@@ -20,7 +20,6 @@
 		"Retina",
 		"gray_antialias"
 	],
-	"font_size": 14,
 	"git_diff_target": "head",
 	"highlight_line": false,
 	"highlight_modified_tabs": true,

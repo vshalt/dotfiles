@@ -37,3 +37,6 @@ Next, open neovim and `:PlugInstall` the plugins.
 
 ### For awesome wm
 `ln -s /path/to/dotfiles/awesome ~/.config/awesome`
+
+### For doom emacs
+`ln -s /path/to/dotfiles/doom.d ~/.doom.d`
