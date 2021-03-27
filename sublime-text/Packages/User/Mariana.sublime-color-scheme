@@ -1,0 +1,13 @@
+{
+    "globals":
+    {
+        "background": "color(var(blue3) l(- 5%))",
+        "line_diff_added": "var(green)",
+        "line_diff_modified": "var(blue)",
+        "line_diff_deleted": "var(red)",
+        "line_diff_width": "5",
+        "brackets_options": "glow",
+        "bracket_contents_options": "glow",
+        "tags_options": "glow",
+    },
+}

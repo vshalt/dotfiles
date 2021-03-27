@@ -1,0 +1,4 @@
+" Type :help nv for help.
+let mapleader=<space>
+nnoremap <leader>n :Neovintageous action=toggle_side_bar<CR>
+nnoremap <leader>bb :q<CR>
