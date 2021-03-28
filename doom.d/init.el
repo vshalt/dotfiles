@@ -99,7 +99,7 @@
        ;;pass              ; password manager for nerds
        ;;pdf               ; pdf enhancements
        ;;prodigy           ; FIXME managing external services & code builders
-       ;;rgb               ; creating color strings
+       rgb               ; creating color strings
        ;;taskrunner        ; taskrunner for all your projects
        ;;terraform         ; infrastructure as code
        ;;tmux              ; an API for interacting with tmux
@@ -160,7 +160,7 @@
        ;;rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;;scala             ; java, but good
        ;;scheme            ; a fully conniving family of lisps
-       sh                ; she sells {ba,z,fi}sh shells on the C xor
+       sh                ; she sells {ba,z,fi}sh shells on the C x
        ;;sml
        ;;solidity          ; do you need a blockchain? No.
        ;;swift             ; who asked for emoji variables?

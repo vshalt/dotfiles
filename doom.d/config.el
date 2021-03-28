@@ -57,3 +57,9 @@
 (setq-default evil-escape-delay 0.2)
 (setq-default company-idle-delay 0.2)
 (toggle-frame-maximized)
+
+(use-package lsp-pyright
+  :ensure t
+  :hook (python-mode . (lambda ()
+                          (require 'lsp-pyright)
+                          (lsp))))  ; or lsp-deferred
