@@ -3,12 +3,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
  '(ansi-color-names-vector
-   ["#040408" "#D83441" "#79D836" "#D8B941" "#3679D8" "#8041D8" "#36D8BD" "#CEDBE5"])
+   ["#f2e5bc" "#D83441" "#79D836" "#D8B941" "#3679D8" "#8041D8" "#36D8BD" "#CEDBE5"])
  '(custom-safe-themes
    (quote
-    ("d6603a129c32b716b3d3541fc0b6bfe83d0e07f1954ee64517aa62c9405a3441" default)))
- '(doom-big-font-mode nil)
+    ("fd22c8c803f2dac71db953b93df6560b6b058cb931ac12f688def67f08c10640" "4a8d4375d90a7051115db94ed40e9abb2c0766e80e228ecad60e06b3b397acab" "f94110b35f558e4c015b2c680f150bf8a19799d775f8352c957d9d1054b0a210" "c4bdbbd52c8e07112d1bfd00fee22bf0f25e727e95623ecb20c4fa098b74c1bd" "76bfa9318742342233d8b0b42e824130b3a50dcc732866ff8e47366aed69de11" "e27556a94bd02099248b888555a6458d897e8a7919fd64278d1f1e8784448941" "95d0ed21bb0e919be7687a25ad59a1c2c8df78cbe98c9e369d44e65bfd65b167" "79278310dd6cacf2d2f491063c4ab8b129fee2a498e4c25912ddaa6c3c5b621e" "aaa4c36ce00e572784d424554dcc9641c82d1155370770e231e10c649b59a074" "0e2a7e1e632dd38a8e0227d2227cb8849f877dd878afb8219cb6bcdd02068a52" "2cdc13ef8c76a22daa0f46370011f54e79bae00d5736340a5ddfe656a767fddf" "990e24b406787568c592db2b853aa65ecc2dcd08146c0d22293259d400174e37" "d6603a129c32b716b3d3541fc0b6bfe83d0e07f1954ee64517aa62c9405a3441" default)))
+ '(doom-big-font-mode nil t)
  '(fci-rule-color "#767676")
  '(jdee-db-active-breakpoint-face-colors (cons "#0F1019" "#D85F00"))
  '(jdee-db-requested-breakpoint-face-colors (cons "#0F1019" "#79D836"))

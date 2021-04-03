@@ -1,3 +1,6 @@
+" g Leader key
+let mapleader=" "
+
 " Because I hate arrowkeys
 noremap <Up> <Nop>
 noremap <Down> <Nop>
@@ -11,8 +14,6 @@ imap <C-h> <C-w>h
 imap <C-j> <C-w>j
 imap <C-k> <C-w>k
 imap <C-l> <C-w>l
-" g Leader key
-let mapleader=" "
 " let localleader=" "
 nnoremap <Space> <Nop>
 
@@ -28,10 +29,12 @@ inoremap jj <Esc>
 " nnoremap <c-u> viwU<Esc>
 
 " TAB in general mode will move to text buffer
-nnoremap <silent> <TAB> :bnext<CR>
+nnoremap <leader>bn :bnext<CR>
 " SHIFT-TAB will go back
-nnoremap <silent> <S-TAB> :bprevious<CR>
-nnoremap <leader>bb :Bd<CR>
+nnoremap <leader>bp :bprevious<CR>
+nnoremap <leader>bb :buffers<CR>
+nnoremap <leader><leader> :FZF<CR>
+nnoremap <leader>bd :Bd<CR>
 
 " Move selected line / block of text in visual mode
 " shift + k to move up
@@ -49,10 +52,10 @@ nnoremap <silent> <C-c> <Esc>
 inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Better window navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <leader>wh <C-w>h
+nnoremap <leader>wj <C-w>j
+nnoremap <leader>wk <C-w>k
+nnoremap <leader>wl <C-w>l
 
 " Terminal window navigation
 tnoremap <C-h> <C-\><C-N><C-w>h
@@ -76,15 +79,9 @@ inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
 " NerdTree remap
-nnoremap <Leader>n :NERDTree<CR>
-nnoremap <Leader>N :NERDTreeClose<CR>
-
-" FZF
-nnoremap <C-p> :FZF<CR>
+nnoremap <Leader>op :NERDTreeToggle<CR>
 
 " vim-commentary
-nnoremap <leader><leader> :Commentary<CR>
-
 nnoremap <leader>u :UndotreeToggle<CR>
 
 

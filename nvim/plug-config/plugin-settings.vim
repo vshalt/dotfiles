@@ -270,4 +270,4 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 
 " -------------------------------- Vim BBye ---------------------------------
-nnoremap <leader>BB :bufdo:Bd<CR>
+nnoremap <leader>BD :bufdo:Bd<CR>

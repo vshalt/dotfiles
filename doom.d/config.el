@@ -57,9 +57,15 @@
 (setq-default evil-escape-delay 0.2)
 (setq-default company-idle-delay 0.2)
 (toggle-frame-maximized)
-
 (use-package lsp-pyright
   :ensure t
   :hook (python-mode . (lambda ()
                           (require 'lsp-pyright)
                           (lsp))))  ; or lsp-deferred
+(setq-default lsp-enable-file-watchers t)
+(setq-default lsp-file-watch-threshold 10)
+
+(use-package company
+  :ensure t
+  :init
+ (add-hook 'after-init-hook 'global-company-mode))
