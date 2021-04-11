@@ -290,6 +290,26 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
 
+    -- volume key bindings
+    awful.key(
+        {},
+        'XF86AudioRaiseVolume',
+        volume_widget.raise,
+        {description = 'volume up', group = 'hotkeys'}
+    ),
+    awful.key(
+        {},
+        'XF86AudioLowerVolume',
+        volume_widget.lower,
+        {description = 'volume down', group = 'hotkeys'}
+    ),
+    awful.key(
+        {},
+        'XF86AudioMute',
+        volume_widget.toggle,
+        {description = 'toggle mute', group = 'hotkeys'}
+    ),
+
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "client"}),
