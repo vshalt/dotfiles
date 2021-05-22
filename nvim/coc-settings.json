@@ -34,12 +34,12 @@
   "python.linting.enabled": true,
   "python.linting.flake8Enabled": true,
   "python.linting.flake8Path": "/home/user/.pyenv/versions/3.8.5/bin/flake8",
-  "python.linting.flake8Args": ["--ignore=E501,W292,E302,E305,W391,E303,E291,W293,E231,E222,E225,E271,E722,E221,E251,E226,E228,E241"],
+  /* "python.linting.flake8Args": ["--ignore=E501,W292,E302,E305,W391,E303,E291,W293,E231,E222,E225,E271,E722,E221,E251,E226,E228,E241"], */
 
   "python.formatting.blackEnabled": true,
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "/home/user/.pyenv/versions/3.8.5/bin/black",
-  "python.formatting.blackArgs": ["--ignore=E501,W292,E302,E305,W391,E303,E291,W293,E231,E222,E225,E271,E722,E221,E251,E226,E228,E241"],
+  /* "python.formatting.blackArgs": ["--ignore=E501,W292,E302,E305,W391,E303,E291,W293,E231,E222,E225,E271,E722,E221,E251,E226,E228,E241"], */
 
   " python.sortImports.path": "/home/user/.pyenv/versions/3.8.5/bin/isort",
 

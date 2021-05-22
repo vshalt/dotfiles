@@ -10,4 +10,12 @@
         "bracket_contents_options": "glow",
         "tags_options": "glow",
     },
+    "rules": [
+    {
+        "name": "Glowing Python Entities",
+        // __ type methods are support functions, which has a higher
+        // precedence rule than this one by default.
+        "scope": "source.python & (entity.name, support.function)",
+        "font_style": "glow",
+    }, ]
 }

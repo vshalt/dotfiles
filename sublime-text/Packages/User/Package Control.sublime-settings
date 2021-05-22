@@ -6,12 +6,10 @@
 	],
 	"installed_packages":
 	[
-		"gruvbox",
+		"Anaconda",
 		"HTML-CSS-JS Prettify",
-		"JSX",
-		"LiveReload",
 		"NeoVintageous",
 		"Package Control",
-		"SideBarEnhancements"
-	]
+		"SideBarEnhancements",
+	],
 }

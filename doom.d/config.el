@@ -69,3 +69,5 @@
   :ensure t
   :init
  (add-hook 'after-init-hook 'global-company-mode))
+
+(setq-default doom-gruvbox-dark-variant 'hard)
