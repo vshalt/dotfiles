@@ -16,4 +16,17 @@
         "keys": ["ctrl+l"],
         "command": "next_view",
     },
+    {
+        "command": "lsp_format_document",
+        "keys": [
+            "UNBOUND"
+        ],
+        "context": [
+            {
+                "key": "lsp.session_with_capability",
+                "operator": "equal",
+                "operand": "documentFormattingProvider | documentRangeFormattingProvider"
+            }
+        ]
+    },
 ]

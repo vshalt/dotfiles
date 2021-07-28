@@ -1,14 +1,16 @@
+-- USER PREFERENCES ---------------------------------------
+-- END USER PREFERENCES -----------------------------------
+
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
 
--- custom
+-- USER PREFERENCES ---------------------------------------
 local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
 local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
 local volume_widget_widget = volume_widget({display_notification = true})
 local batteryarc_widget = require("awesome-wm-widgets.battery-widget.battery")
-local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
-
+-- END USER PREFERENCES -----------------------------------
 
 -- Standard awesome library
 local gears = require("gears")
@@ -60,8 +62,10 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
+-- USER PREFERENCES ---------------------------------------
 terminal = "xfce4-terminal"
 editor = os.getenv("EDITOR") or "nvim"
+-- END USER PREFERENCES ---------------------------------------
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -72,6 +76,7 @@ editor_cmd = terminal .. " -e " .. editor
 modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
+-- USER PREFERENCES ---------------------------------------
 awful.layout.layouts = {
     -- awful.layout.suit.floating,
     awful.layout.suit.tile,
@@ -89,6 +94,7 @@ awful.layout.layouts = {
     -- awful.layout.suit.corner.ne,
     -- awful.layout.suit.corner.sw,
     -- awful.layout.suit.corner.se,
+-- END USER PREFERENCES -----------------------------------
 }
 -- }}}
 
@@ -134,13 +140,6 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
--- default
-local cw = calendar_widget()
--- or customized
-mytextclock:connect_signal("button::press", 
-    function(_, _, _, button)
-        if button == 1 then cw.toggle() end
-    end)
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -242,15 +241,16 @@ awful.screen.connect_for_each_screen(function(s)
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
+-- USER PREFERENCES ---------------------------------------
             layout = wibox.layout.fixed.horizontal,
-            mytextclock,
-
+            -- mykeyboardlayout,
             wibox.widget.systray(),
-
-             --[[default]]
+            mytextclock,
+            -- s.mylayoutbox,
             batteryarc_widget(),
-             volume_widget_widget,
+            volume_widget_widget,
             logout_menu_widget(),
+-- END USER PREFERENCES -----------------------------------
         },
     }
 end)
@@ -290,7 +290,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
 
-    -- volume key bindings
+-- USER PREFERENCES ---------------------------------------
     awful.key(
         {},
         'XF86AudioRaiseVolume',
@@ -309,6 +309,27 @@ globalkeys = gears.table.join(
         volume_widget.toggle,
         {description = 'toggle mute', group = 'hotkeys'}
     ),
+
+
+    awful.key(
+        {modkey,},
+        '=',
+        volume_widget.raise,
+        {description = 'volume up', group = 'hotkeys'}
+    ),
+    awful.key(
+        {modkey,},
+        '-',
+        volume_widget.lower,
+        {description = 'volume down', group = 'hotkeys'}
+    ),
+    awful.key(
+        {modkey,},
+        '\\',
+        volume_widget.toggle,
+        {description = 'toggle mute', group = 'hotkeys'}
+    ),
+-- END USER PREFERENCES -----------------------------------
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
@@ -337,6 +358,16 @@ globalkeys = gears.table.join(
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
+-- USER PREFERENCES ---------------------------------------
+    awful.key({ modkey,           }, "g", function () awful.spawn.with_shell('sol') end,
+              {description = "Open game", group = "game"}),
+    awful.key({ modkey,           }, "v", function () awful.spawn.with_shell('thunar') end,
+              {description = "Open thunar", group = "file"}),
+    awful.key({ modkey,           }, "b", function () awful.spawn.with_shell('brave-browser') end,
+              {description = "Open browser", group = "browser"}),
+    awful.key({ modkey,           }, "e", function () awful.spawn.with_shell('subl') end,
+              {description = "Editor", group = "editor"}),
+-- END USER PREFERENCES -----------------------------------
 
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
@@ -393,8 +424,11 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
-    awful.key({ modkey  }, "q",      function (c) c:kill()                         end,
+
+-- USER PREFERENCES -----------------------------------
+    awful.key({ modkey,           }, "q",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
+-- END USER PREFERENCES -----------------------------------
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
@@ -611,21 +645,27 @@ client.connect_signal("request::titlebars", function(c)
     }
 end)
 
+-- USER PREFERENCES ---------------------------------------
 -- Enable sloppy focus, so that focus follows mouse.
 -- client.connect_signal("mouse::enter", function(c)
 --     c:emit_signal("request::activate", "mouse_enter", {raise = false})
 -- end)
+-- END USER PREFERENCES -----------------------------------
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
--- gaps
+
+-- USER PREFERENCES ---------------------------------------
+--gaps
 beautiful.useless_gap = 5
 
 -- autostart
 awful.spawn.with_shell("compton")
-awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("xfce4-power-manager")
+
 awful.util.spawn('nm-applet')
 awful.spawn.with_shell('xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1')
+awful.spawn.with_shell('xinput set-prop "AT Translated Set 2 keyboard" "Device Enabled" 0')
+-- END USER PREFERENCES -----------------------------------

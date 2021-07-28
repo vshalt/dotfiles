@@ -1,4 +1,13 @@
 " Type :help nv for help.
 let mapleader=<space>
 nnoremap <leader>n :Neovintageous action=toggle_side_bar<CR>
-nnoremap <leader>bb :q<CR>
+nnoremap <leader>bd :q<CR>
+
+nnoremap gd :LSPSymbolDefinition<CR>
+nnoremap <leader>k :LSPHover<CR>
+nnoremap gr :LSPSymbolReferences<CR>
+nnoremap gR :LSPSymbolRename<CR>
+
+nnoremap <leader>r<leader> :e $HOME/dev/resources/dailyreport.md<CR>
+nnoremap <leader>c<leader> :e $HOME/dev/resources/dsa.py<CR>
+nnoremap <leader>s<leader> :e $HOME/dev/resources/scratch.md<CR>

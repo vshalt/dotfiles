@@ -74,14 +74,7 @@ nnoremap <silent> <M-k>    :resize +2<CR>
 nnoremap <silent> <M-g>    :vertical resize -2<CR>
 nnoremap <silent> <M-l>    :vertical resize +2<CR>
 
-" Better nav for omnicomplete
-inoremap <expr> <c-j> ("\<C-n>")
-inoremap <expr> <c-k> ("\<C-p>")
-
 " NerdTree remap
-nnoremap <Leader>op :NERDTreeToggle<CR>
-
-" vim-commentary
-nnoremap <leader>u :UndotreeToggle<CR>
+nnoremap yot :NERDTreeToggle<CR>
 
 
