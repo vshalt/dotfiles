@@ -1,0 +1,25 @@
+~/.config/nvim/..
+ ✗ lua/
+│  config/
+│ │  autopairs.lua
+│ │  bufferline.lua
+│ │  compe.lua
+│ │  dashboard.lua
+│ │  lsp.lua
+│ │  lspkind.lua
+│ │  lualine.lua
+│ │  nvim-colorizer.lua
+│ │  nvim-comment.lua
+│ │  nvim-treesitter.lua
+│ │  nvimtree.lua
+│ │  tabline.lua
+│ └  telescope.lua
+│  modules/
+│  themes/
+│  ✗ keymap.lua
+│  ✗ options.lua
+│  ✗ plug.lua
+│  scheme.lua
+└  settings.lua
+ ★ plugin/
+ ✗ init.lua

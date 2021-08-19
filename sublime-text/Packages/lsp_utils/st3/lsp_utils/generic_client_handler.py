@@ -6,7 +6,7 @@ from LSP.plugin import ClientConfig
 from LSP.plugin import DottedDict
 from LSP.plugin import WorkspaceFolder
 from LSP.plugin.core.typing import Any, Dict, List, Optional, Tuple
-from package_control import events
+from package_control import events  # type: ignore
 import os
 import shutil
 import sublime
@@ -136,6 +136,7 @@ class GenericClientHandler(ClientHandler, metaclass=ABCMeta):
         Remember to call the super class and merge the results if overriding.
         """
         return {
+            'pathsep': os.pathsep,
             'server_path': cls.binary_path(),
         }
 

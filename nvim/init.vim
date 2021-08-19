@@ -6,3 +6,6 @@ source $HOME/.config/nvim/plug-config/plugin-settings.vim
 source $HOME/.config/nvim/themes/theme.vim
 source $HOME/.config/nvim/themes/airline.vim
 source $HOME/.config/nvim/themes/syntax.vim
+
+
+lua require 'lspconfig'.pyright.setup{}

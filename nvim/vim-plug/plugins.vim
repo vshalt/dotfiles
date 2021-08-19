@@ -17,6 +17,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'moll/vim-bbye'
     Plug 'tpope/vim-fugitive'
     Plug 'mhartington/oceanic-next'
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'hrsh7th/nvim-compe'
 
     " Plug 'mhinz/vim-startify'
     " Plug 'morhetz/gruvbox'

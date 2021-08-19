@@ -664,6 +664,7 @@ beautiful.useless_gap = 5
 -- autostart
 awful.spawn.with_shell("compton")
 awful.spawn.with_shell("xfce4-power-manager")
+awful.spawn.with_shell("nitrogen --restore")
 
 awful.util.spawn('nm-applet')
 awful.spawn.with_shell('xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1')
